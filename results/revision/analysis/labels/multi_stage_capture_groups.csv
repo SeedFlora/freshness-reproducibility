@@ -1,0 +1,10 @@
+capture_group_id,produce_type,images,duplicate_groups,grouped_split,cv_fold,Fresh,Semi-Fresh,Rotten,stage_count,stages
+capture-000041,tomato,309,232,train,fold-0,242,67,0,2,Fresh+Semi-Fresh
+capture-000043,eggplant,179,161,validation,fold-1,133,46,0,2,Fresh+Semi-Fresh
+capture-000001,pineapple,175,175,test,fold-2,121,32,22,3,Fresh+Semi-Fresh+Rotten
+capture-000020,papaya,93,92,train,fold-4,17,0,76,2,Fresh+Rotten
+capture-000015,pineapple,83,83,train,fold-3,71,12,0,2,Fresh+Semi-Fresh
+capture-000121,tomato,52,35,validation,fold-4,41,0,11,2,Fresh+Rotten
+capture-000053,tomato,46,28,test,fold-2,38,0,8,2,Fresh+Rotten
+capture-000066,cucumber,15,15,validation,fold-1,0,7,8,2,Semi-Fresh+Rotten
+capture-000166,tomato,13,8,train,fold-2,0,6,7,2,Semi-Fresh+Rotten

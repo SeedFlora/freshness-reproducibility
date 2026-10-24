@@ -1,0 +1,85 @@
+# Derived from config/experiments.yaml for the peer-review revision.
+seed: 2026
+device: auto
+experiment:
+  split_seed: 2026
+  training_seeds:
+  - 2026
+  - 3407
+  - 777
+  reference_seed: 2026
+  selection_metric: validation_macro_f1
+  selection_direction: maximize
+  top_external_architectures: 2
+  external_produce_types:
+  - banana
+  - orange
+  external_source_path_component: Original Image
+  inference_scope: model_forward_pass_only
+data:
+  image_size: 320
+  batch_size: 24
+  num_workers: 4
+  pin_memory: true
+  split_ratios:
+  - 0.7
+  - 0.15
+  - 0.15
+  split_names:
+  - train
+  - validation
+  - test
+  stratify_columns:
+  - freshness_label
+  - produce_type
+  group_columns:
+  - duplicate_group_id
+  - capture_group_id
+model:
+  names:
+  - mobilenet_v2
+  - resnet50
+  - densenet121
+  - efficientnet_b0
+  - convnext_tiny
+  pretrained: true
+  auxiliary_produce_head: true
+training:
+  epochs: 12
+  head_warmup_epochs: 1
+  learning_rate: 0.0003
+  weight_decay: 0.0001
+  label_smoothing: 0.05
+  auxiliary_loss_weight: 0.2
+  amp: true
+  gradient_accumulation_steps: 1
+  patience: 3
+  monitor: validation_macro_f1
+augmentation:
+  implementation: fresh_or_trash.data.build_transform
+  random_resized_crop_scale:
+  - 0.75
+  - 1.0
+  horizontal_flip_probability: 0.5
+  rotation_degrees: 10
+  color_jitter:
+    brightness: 0.2
+    contrast: 0.2
+    saturation: 0.15
+    hue: 0.03
+  normalization: imagenet
+evaluation:
+  ece_bins: 15
+  corruption_severities:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  latency_batch_size: 1
+  latency_warmup: 20
+  latency_iterations: 100
+  latency_devices:
+  - cpu
+  - cuda
+output_dir: results/experiments

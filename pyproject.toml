@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fresh-or-trash-research"
+version = "0.1.0"
+description = "Leakage-aware produce freshness benchmarking pipeline"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.26,<3",
+  "pandas>=2.1,<3",
+  "Pillow>=10,<13",
+  "PyYAML>=6,<7",
+  "scikit-learn>=1.3,<2",
+  "torch>=2.3,<3",
+  "torchvision>=0.17,<1",
+  "ImageHash>=4.3,<5",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<9"]
+app = ["streamlit>=1.62,<2"]
+analysis = ["matplotlib>=3.8,<4", "seaborn>=0.13,<1"]
+
+[project.scripts]
+fot-manifest = "fresh_or_trash.cli.manifest:main"
+fot-group = "fresh_or_trash.cli.group:main"
+fot-split = "fresh_or_trash.cli.split:main"
+fot-train = "fresh_or_trash.cli.train:main"
+fot-benchmark = "fresh_or_trash.cli.benchmark:main"
+fot-calibrate = "fresh_or_trash.cli.calibrate:main"
+fot-evaluate = "fresh_or_trash.cli.evaluate:main"
+fot-external = "fresh_or_trash.cli.external:main"
+fot-profile = "fresh_or_trash.cli.profile:main"
+fot-gradcam = "fresh_or_trash.cli.gradcam:main"
+fot-check-leakage = "fresh_or_trash.cli.check_leakage:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-ra"
+testpaths = ["tests"]

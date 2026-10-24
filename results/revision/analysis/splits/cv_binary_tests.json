@@ -1,0 +1,28 @@
+{
+  "available_runs": 25,
+  "bootstrap_groups": 195,
+  "bootstrap_replicates": 2000,
+  "bootstrap_unit": "capture_group_id",
+  "complete_folds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "complete_models": [
+    "mobilenet_v2",
+    "resnet50",
+    "densenet121",
+    "efficientnet_b0",
+    "convnext_tiny"
+  ],
+  "expected_runs": 25,
+  "friedman_df": 4,
+  "friedman_p_value": 0.578103731184378,
+  "friedman_statistic": 2.8799999999999955,
+  "kendall_w": 0.14399999999999977,
+  "leader": "convnext_tiny",
+  "max_abs_difference_vs_test_metrics_json": 0.0,
+  "task": "binary"
+}

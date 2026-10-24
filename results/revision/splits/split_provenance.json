@@ -1,0 +1,27 @@
+{
+  "split_seed": 2026,
+  "stratify_columns": [
+    "freshness_label",
+    "produce_type"
+  ],
+  "staged_levels": {
+    "L1_exact": [
+      "sha256"
+    ],
+    "L2_hash": [
+      "duplicate_group_id"
+    ],
+    "L3_embedding": [
+      "duplicate_group_id",
+      "embedding_cluster_id"
+    ],
+    "L4_capture": [
+      "duplicate_group_id",
+      "capture_group_id"
+    ]
+  },
+  "cv_folds": 5,
+  "cv_rule": "test=fold k, validation=fold (k+1) mod 5, train=remaining three folds",
+  "source_manifest": "data\\splits\\grouped_manifest.csv",
+  "l4_reproduces_frozen_grouped_split": true
+}

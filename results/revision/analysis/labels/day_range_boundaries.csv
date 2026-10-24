@@ -1,0 +1,17 @@
+produce_type,boundary,lower_range,upper_range,lower_end_day,upper_start_day,relation,days_in_both
+banana,Fresh/Semi-Fresh,1-4,4-7,4,4,shared endpoint,1
+banana,Semi-Fresh/Rotten,4-7,7-13,7,7,shared endpoint,1
+bitter_melon,Fresh/Semi-Fresh,1-3,3-5,3,3,shared endpoint,1
+bitter_melon,Semi-Fresh/Rotten,3-5,5-8,5,5,shared endpoint,1
+cucumber,Fresh/Semi-Fresh,1-6,6-12,6,6,shared endpoint,1
+cucumber,Semi-Fresh/Rotten,6-12,12-20,12,12,shared endpoint,1
+eggplant,Fresh/Semi-Fresh,1-4,4-8,4,4,shared endpoint,1
+eggplant,Semi-Fresh/Rotten,4-8,8-15,8,8,shared endpoint,1
+orange,Fresh/Semi-Fresh,1-9,9-20,9,9,shared endpoint,1
+orange,Semi-Fresh/Rotten,9-20,20-35,20,20,shared endpoint,1
+papaya,Fresh/Semi-Fresh,1-4,4-7,4,4,shared endpoint,1
+papaya,Semi-Fresh/Rotten,4-7,7-12,7,7,shared endpoint,1
+pineapple,Fresh/Semi-Fresh,1-15,15-25,15,15,shared endpoint,1
+pineapple,Semi-Fresh/Rotten,15-25,25-35,25,25,shared endpoint,1
+tomato,Fresh/Semi-Fresh,1-10,10-24,10,10,shared endpoint,1
+tomato,Semi-Fresh/Rotten,10-24,24-35,24,24,shared endpoint,1

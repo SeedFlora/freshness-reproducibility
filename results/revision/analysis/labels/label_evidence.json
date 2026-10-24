@@ -1,0 +1,96 @@
+{
+  "consensus": {
+    "adjacent_share_range": [
+      0.7906131315893417,
+      0.9012615904630423
+    ],
+    "always_wrong": 40,
+    "always_wrong_capture_groups": 7,
+    "checkpoints": 15,
+    "mean_absolute_ordinal_error_range": [
+      0.3349378259125551,
+      0.516245487364621
+    ],
+    "never_wrong": 206,
+    "test_capture_groups": 31,
+    "test_images": 831,
+    "test_images_in_multi_stage_groups": 221,
+    "wrong_at_least_80pct": 160,
+    "wrong_at_least_80pct_by_class": {
+      "Fresh": 53,
+      "Rotten": 36,
+      "Semi-Fresh": 71
+    },
+    "wrong_at_least_80pct_capture_groups": 15,
+    "wrong_at_least_80pct_in_five_largest_groups": 124,
+    "wrong_at_least_80pct_in_multi_stage_groups": 43
+  },
+  "day_ranges": {
+    "boundaries": 16,
+    "by_relation": {
+      "shared endpoint": 16
+    }
+  },
+  "exact_conflicts": {
+    "combinations": [
+      {
+        "conflict_groups": 17,
+        "files": 34,
+        "folder_ranges": "1-9 days | 9-20 days",
+        "produce_type": "orange",
+        "stages": "Fresh+Semi-Fresh"
+      }
+    ],
+    "conflict_groups": 17,
+    "files": 34
+  },
+  "multi_stage_groups": {
+    "by_combination": [
+      {
+        "groups": 3,
+        "images": 191,
+        "stages": "Fresh+Rotten"
+      },
+      {
+        "groups": 3,
+        "images": 571,
+        "stages": "Fresh+Semi-Fresh"
+      },
+      {
+        "groups": 1,
+        "images": 175,
+        "stages": "Fresh+Semi-Fresh+Rotten"
+      },
+      {
+        "groups": 2,
+        "images": 28,
+        "stages": "Semi-Fresh+Rotten"
+      }
+    ],
+    "capture_groups": 285,
+    "spanning_groups": 9,
+    "spanning_groups_by_grouped_split": {
+      "test": 2,
+      "train": 4,
+      "validation": 3
+    },
+    "spanning_images": 965,
+    "spanning_images_by_grouped_split": {
+      "test": 221,
+      "train": 498,
+      "validation": 246
+    }
+  },
+  "near_duplicates": {
+    "by_stage_pair": {
+      "Fresh/Rotten": 3,
+      "Fresh/Semi-Fresh": 36,
+      "Semi-Fresh/Rotten": 4,
+      "same stage": 325
+    },
+    "images_in_differing_pairs": 54,
+    "linked_within_produce_pairs": 368,
+    "pairs_with_different_stages": 43,
+    "unlinked_or_cross_produce_candidates": 1
+  }
+}

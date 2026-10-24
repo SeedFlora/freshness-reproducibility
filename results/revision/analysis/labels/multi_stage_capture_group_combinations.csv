@@ -1,0 +1,5 @@
+stages,groups,images
+Fresh+Rotten,3,191
+Fresh+Semi-Fresh,3,571
+Fresh+Semi-Fresh+Rotten,1,175
+Semi-Fresh+Rotten,2,28

@@ -1,0 +1,2 @@
+# Research-only environment. The root requirements.txt belongs to the original app.
+-e .[dev,app,analysis]

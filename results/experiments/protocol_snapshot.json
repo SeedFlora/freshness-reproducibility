@@ -1,0 +1,116 @@
+{
+  "protocol": {
+    "augmentation": {
+      "color_jitter": {
+        "brightness": 0.2,
+        "contrast": 0.2,
+        "hue": 0.03,
+        "saturation": 0.15
+      },
+      "horizontal_flip_probability": 0.5,
+      "implementation": "fresh_or_trash.data.build_transform",
+      "normalization": "imagenet",
+      "random_resized_crop_scale": [
+        0.75,
+        1.0
+      ],
+      "rotation_degrees": 10
+    },
+    "data": {
+      "batch_size": 24,
+      "group_columns": [
+        "duplicate_group_id",
+        "capture_group_id"
+      ],
+      "image_size": 224,
+      "num_workers": 4,
+      "pin_memory": true,
+      "split_names": [
+        "train",
+        "validation",
+        "test"
+      ],
+      "split_ratios": [
+        0.7,
+        0.15,
+        0.15
+      ],
+      "stratify_columns": [
+        "freshness_label",
+        "produce_type"
+      ]
+    },
+    "device": "auto",
+    "evaluation": {
+      "corruption_severities": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "ece_bins": 15,
+      "latency_batch_size": 1,
+      "latency_devices": [
+        "cpu",
+        "cuda"
+      ],
+      "latency_iterations": 100,
+      "latency_warmup": 20
+    },
+    "experiment": {
+      "external_produce_types": [
+        "banana",
+        "orange"
+      ],
+      "external_source_path_component": "Original Image",
+      "inference_scope": "model_forward_pass_only",
+      "reference_seed": 2026,
+      "selection_direction": "maximize",
+      "selection_metric": "validation_macro_f1",
+      "split_seed": 2026,
+      "top_external_architectures": 2,
+      "training_seeds": [
+        2026,
+        3407,
+        777
+      ]
+    },
+    "model": {
+      "auxiliary_produce_head": true,
+      "names": [
+        "mobilenet_v2",
+        "resnet50",
+        "densenet121",
+        "efficientnet_b0",
+        "convnext_tiny"
+      ],
+      "pretrained": true
+    },
+    "output_dir": "results/experiments",
+    "seed": 2026,
+    "training": {
+      "amp": true,
+      "auxiliary_loss_weight": 0.2,
+      "epochs": 12,
+      "gradient_accumulation_steps": 1,
+      "head_warmup_epochs": 1,
+      "label_smoothing": 0.05,
+      "learning_rate": 0.0003,
+      "monitor": "validation_macro_f1",
+      "patience": 3,
+      "weight_decay": 0.0001
+    }
+  },
+  "protocol_file": "config\\experiments.yaml",
+  "split_inputs": {
+    "grouped_manifest": "data\\splits\\grouped_manifest.csv",
+    "grouped_manifest_sha256": "13db3d3f5bf5a2a1ce6d49246d381b2a9817cd24879779fc8a4c2841cd6282e6",
+    "naive_manifest": "data\\splits\\naive_manifest.csv",
+    "naive_manifest_sha256": "4328cd45ecface3dc28c959c6f0a61609fcde483eafc98e9f9e5dfc7440d7c15",
+    "sample_count": 5183,
+    "split_provenance": "data\\splits\\split_provenance.json",
+    "split_seed": 2026
+  },
+  "test_selection_policy": "validation_only; test metrics are evaluated after selection"
+}

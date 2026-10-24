@@ -1,0 +1,194 @@
+{
+  "calibrated_vs_uncalibrated_argmax_disagreements": 0,
+  "macro_f1": [
+    {
+      "absolute_difference": 0.0,
+      "architecture": "mobilenet_v2",
+      "calibration": "calibrated",
+      "frozen_macro_f1_mean": 0.6267328620889524,
+      "predicted_index_mismatches": 0,
+      "recomputed_macro_f1_mean": 0.6267328620889524,
+      "recomputed_macro_f1_sd": 0.045559846105709983,
+      "setting": "grouped",
+      "task": "three_stage"
+    },
+    {
+      "absolute_difference": 0.0,
+      "architecture": "resnet50",
+      "calibration": "calibrated",
+      "frozen_macro_f1_mean": 0.6898448257346382,
+      "predicted_index_mismatches": 0,
+      "recomputed_macro_f1_mean": 0.6898448257346382,
+      "recomputed_macro_f1_sd": 0.012026107933836084,
+      "setting": "grouped",
+      "task": "three_stage"
+    },
+    {
+      "absolute_difference": 0.0,
+      "architecture": "densenet121",
+      "calibration": "calibrated",
+      "frozen_macro_f1_mean": 0.5614871764655103,
+      "predicted_index_mismatches": 0,
+      "recomputed_macro_f1_mean": 0.5614871764655103,
+      "recomputed_macro_f1_sd": 0.04690784296666104,
+      "setting": "grouped",
+      "task": "three_stage"
+    },
+    {
+      "absolute_difference": 0.0,
+      "architecture": "efficientnet_b0",
+      "calibration": "calibrated",
+      "frozen_macro_f1_mean": 0.6434041491565493,
+      "predicted_index_mismatches": 0,
+      "recomputed_macro_f1_mean": 0.6434041491565493,
+      "recomputed_macro_f1_sd": 0.011942320266454155,
+      "setting": "grouped",
+      "task": "three_stage"
+    },
+    {
+      "absolute_difference": 0.0,
+      "architecture": "convnext_tiny",
+      "calibration": "calibrated",
+      "frozen_macro_f1_mean": 0.6445008604316633,
+      "predicted_index_mismatches": 0,
+      "recomputed_macro_f1_mean": 0.6445008604316633,
+      "recomputed_macro_f1_sd": 0.021350130307675044,
+      "setting": "grouped",
+      "task": "three_stage"
+    },
+    {
+      "absolute_difference": 0.0,
+      "architecture": "mobilenet_v2",
+      "calibration": "uncalibrated",
+      "frozen_macro_f1_mean": 0.6267328620889524,
+      "predicted_index_mismatches": 0,
+      "recomputed_macro_f1_mean": 0.6267328620889524,
+      "recomputed_macro_f1_sd": 0.045559846105709983,
+      "setting": "grouped",
+      "task": "three_stage"
+    },
+    {
+      "absolute_difference": 0.0,
+      "architecture": "resnet50",
+      "calibration": "uncalibrated",
+      "frozen_macro_f1_mean": 0.6898448257346382,
+      "predicted_index_mismatches": 0,
+      "recomputed_macro_f1_mean": 0.6898448257346382,
+      "recomputed_macro_f1_sd": 0.012026107933836084,
+      "setting": "grouped",
+      "task": "three_stage"
+    },
+    {
+      "absolute_difference": 0.0,
+      "architecture": "densenet121",
+      "calibration": "uncalibrated",
+      "frozen_macro_f1_mean": 0.5614871764655103,
+      "predicted_index_mismatches": 0,
+      "recomputed_macro_f1_mean": 0.5614871764655103,
+      "recomputed_macro_f1_sd": 0.04690784296666104,
+      "setting": "grouped",
+      "task": "three_stage"
+    },
+    {
+      "absolute_difference": 0.0,
+      "architecture": "efficientnet_b0",
+      "calibration": "uncalibrated",
+      "frozen_macro_f1_mean": 0.6434041491565493,
+      "predicted_index_mismatches": 0,
+      "recomputed_macro_f1_mean": 0.6434041491565493,
+      "recomputed_macro_f1_sd": 0.011942320266454155,
+      "setting": "grouped",
+      "task": "three_stage"
+    },
+    {
+      "absolute_difference": 0.0,
+      "architecture": "convnext_tiny",
+      "calibration": "uncalibrated",
+      "frozen_macro_f1_mean": 0.6445008604316633,
+      "predicted_index_mismatches": 0,
+      "recomputed_macro_f1_mean": 0.6445008604316633,
+      "recomputed_macro_f1_sd": 0.021350130307675044,
+      "setting": "grouped",
+      "task": "three_stage"
+    },
+    {
+      "absolute_difference": 0.0,
+      "architecture": "mobilenet_v2",
+      "calibration": "uncalibrated",
+      "frozen_macro_f1_mean": 0.8134785745378722,
+      "predicted_index_mismatches": 0,
+      "recomputed_macro_f1_mean": 0.8134785745378722,
+      "recomputed_macro_f1_sd": 0.02851034654382168,
+      "setting": "grouped",
+      "task": "binary"
+    },
+    {
+      "absolute_difference": 0.0,
+      "architecture": "resnet50",
+      "calibration": "uncalibrated",
+      "frozen_macro_f1_mean": 0.8969895354807981,
+      "predicted_index_mismatches": 0,
+      "recomputed_macro_f1_mean": 0.8969895354807981,
+      "recomputed_macro_f1_sd": 0.04253247417122762,
+      "setting": "grouped",
+      "task": "binary"
+    },
+    {
+      "absolute_difference": 0.0,
+      "architecture": "densenet121",
+      "calibration": "uncalibrated",
+      "frozen_macro_f1_mean": 0.8990727134105034,
+      "predicted_index_mismatches": 0,
+      "recomputed_macro_f1_mean": 0.8990727134105034,
+      "recomputed_macro_f1_sd": 0.017502640663597274,
+      "setting": "grouped",
+      "task": "binary"
+    },
+    {
+      "absolute_difference": 0.0,
+      "architecture": "efficientnet_b0",
+      "calibration": "uncalibrated",
+      "frozen_macro_f1_mean": 0.7970448104842639,
+      "predicted_index_mismatches": 0,
+      "recomputed_macro_f1_mean": 0.7970448104842639,
+      "recomputed_macro_f1_sd": 0.04789655427707412,
+      "setting": "grouped",
+      "task": "binary"
+    },
+    {
+      "absolute_difference": 0.0,
+      "architecture": "convnext_tiny",
+      "calibration": "uncalibrated",
+      "frozen_macro_f1_mean": 0.8619804942554946,
+      "predicted_index_mismatches": 0,
+      "recomputed_macro_f1_mean": 0.8619804942554946,
+      "recomputed_macro_f1_sd": 0.08122282462749876,
+      "setting": "grouped",
+      "task": "binary"
+    },
+    {
+      "absolute_difference": 0.0,
+      "architecture": "mobilenet_v2",
+      "calibration": "uncalibrated",
+      "frozen_macro_f1_mean": 0.9518595461421414,
+      "predicted_index_mismatches": 0,
+      "recomputed_macro_f1_mean": 0.9518595461421414,
+      "recomputed_macro_f1_sd": 0.01782073875926293,
+      "setting": "naive",
+      "task": "three_stage"
+    },
+    {
+      "absolute_difference": 1.1102230246251565e-16,
+      "architecture": "convnext_tiny",
+      "calibration": "uncalibrated",
+      "frozen_macro_f1_mean": 0.9485732328876731,
+      "predicted_index_mismatches": 0,
+      "recomputed_macro_f1_mean": 0.9485732328876733,
+      "recomputed_macro_f1_sd": 0.003909599390157914,
+      "setting": "naive",
+      "task": "three_stage"
+    }
+  ],
+  "max_absolute_difference": 1.1102230246251565e-16,
+  "reproduced": true
+}

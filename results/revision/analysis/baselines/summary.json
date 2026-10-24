@@ -1,0 +1,395 @@
+{
+  "feature_provenance": {
+    "convnext_tiny_imagenet": {
+      "check": {
+        "cache": "data\\cache\\convnext_tiny_imagenet_embeddings.npy",
+        "cache_sha256": "26cca476d9a05192eec499bb488aa0b354a2e649c2cd2a03bc7ecfbc2cea1cc1",
+        "cache_shape": [
+          5183,
+          768
+        ],
+        "checked_sample_ids": [
+          "agrifreshnet-v1-105e374244bb41a8",
+          "agrifreshnet-v1-1f964b8bb435cf11",
+          "agrifreshnet-v1-53bfe29c277aa12a",
+          "agrifreshnet-v1-5672282dbe9a1b3b",
+          "agrifreshnet-v1-7c704c945c12eaea",
+          "agrifreshnet-v1-7c749613c5fb13f5",
+          "agrifreshnet-v1-7dd37780667fff36",
+          "agrifreshnet-v1-a6665109e38ddfac",
+          "agrifreshnet-v1-ba292a9e1d384273",
+          "agrifreshnet-v1-c18d78be099d0bf5",
+          "agrifreshnet-v1-c8d67fcb972d3bb3",
+          "agrifreshnet-v1-cbf1fafd189ba8c0",
+          "agrifreshnet-v1-d93446f66833f3a1",
+          "agrifreshnet-v1-e122f9c953cb4b90",
+          "agrifreshnet-v1-eef9886658526d18",
+          "agrifreshnet-v1-f20ce61324ae5a7b"
+        ],
+        "checked_splits": {
+          "train": 12,
+          "validation": 4
+        },
+        "covers_manifest": true,
+        "max_abs_difference": 5.0202012062072754e-05,
+        "min_cosine_similarity": 0.9999999403953552,
+        "passed": true,
+        "recomputation": "build_model('convnext_tiny', pretrained=True).extract_features, build_transform(224) evaluation geometry, CPU float32, L2-normalised",
+        "reused_previous_check": true,
+        "seconds": 5.82448480000312,
+        "tolerance_max_abs_difference": 0.001
+      },
+      "from_cache": true,
+      "note": "L2-normalised ConvNeXt-Tiny ImageNet embeddings at 224 px, verified against CPU re-extraction",
+      "source": "data\\cache\\convnext_tiny_imagenet_embeddings.npy"
+    },
+    "hsv_channels_3x32": {
+      "batch_size": 32,
+      "bins": "H32 + S32 + V32 concatenated",
+      "compute_seconds": 7.347508999991987,
+      "decode_and_preprocess_seconds": 94.33498949999921,
+      "device": "cpu",
+      "feature": "hsv_channels_3x32",
+      "from_cache": false,
+      "geometry": "Resize(256, bicubic) + CenterCrop(224) from fresh_or_trash.data.build_transform(224, training=False)",
+      "image_size": 224,
+      "images": 5183,
+      "pass_families": [
+        "hsv_joint_8x4x4",
+        "hsv_channels_3x32",
+        "resnet50_imagenet"
+      ],
+      "pass_seconds": 571.8612773999921,
+      "source": "extracted this run",
+      "torch": "2.11.0+cu128",
+      "torch_threads": 4,
+      "torchvision": "0.26.0+cu128"
+    },
+    "hsv_joint_8x4x4": {
+      "batch_size": 32,
+      "bins": "joint H8 x S4 x V4",
+      "compute_seconds": 7.344379799993476,
+      "decode_and_preprocess_seconds": 94.33498949999921,
+      "device": "cpu",
+      "feature": "hsv_joint_8x4x4",
+      "from_cache": false,
+      "geometry": "Resize(256, bicubic) + CenterCrop(224) from fresh_or_trash.data.build_transform(224, training=False)",
+      "image_size": 224,
+      "images": 5183,
+      "pass_families": [
+        "hsv_joint_8x4x4",
+        "hsv_channels_3x32",
+        "resnet50_imagenet"
+      ],
+      "pass_seconds": 571.8612773999921,
+      "source": "extracted this run",
+      "torch": "2.11.0+cu128",
+      "torch_threads": 4,
+      "torchvision": "0.26.0+cu128"
+    },
+    "resnet50_imagenet": {
+      "architecture": "resnet50",
+      "batch_size": 32,
+      "compute_seconds": 461.8571032000036,
+      "decode_and_preprocess_seconds": 94.33498949999921,
+      "device": "cpu",
+      "feature": "resnet50_imagenet",
+      "from_cache": false,
+      "geometry": "Resize(256, bicubic) + CenterCrop(224) from fresh_or_trash.data.build_transform(224, training=False)",
+      "image_size": 224,
+      "images": 5183,
+      "layer": "penultimate (FreshnessClassifier.extract_features, classifier removed), not normalised",
+      "memory_format": "channels_last",
+      "pass_families": [
+        "hsv_joint_8x4x4",
+        "hsv_channels_3x32",
+        "resnet50_imagenet"
+      ],
+      "pass_seconds": 571.8612773999921,
+      "source": "extracted this run",
+      "torch": "2.11.0+cu128",
+      "torch_threads": 4,
+      "torchvision": "0.26.0+cu128",
+      "weights": "ResNet50_Weights.IMAGENET1K_V2"
+    }
+  },
+  "reproduction_check": [
+    {
+      "abs_difference_vs_aggregate": 0.0,
+      "aggregate_macro_f1_mean": 0.6267328620889524,
+      "architecture": "mobilenet_v2",
+      "headline_macro_f1": 0.627,
+      "matches_headline_3dp": true,
+      "recomputed_macro_f1_mean": 0.6267328620889524,
+      "task": "three_stage"
+    },
+    {
+      "abs_difference_vs_aggregate": 0.0,
+      "aggregate_macro_f1_mean": 0.6898448257346382,
+      "architecture": "resnet50",
+      "headline_macro_f1": 0.69,
+      "matches_headline_3dp": true,
+      "recomputed_macro_f1_mean": 0.6898448257346382,
+      "task": "three_stage"
+    },
+    {
+      "abs_difference_vs_aggregate": 0.0,
+      "aggregate_macro_f1_mean": 0.6445008604316633,
+      "architecture": "convnext_tiny",
+      "headline_macro_f1": 0.645,
+      "matches_headline_3dp": true,
+      "recomputed_macro_f1_mean": 0.6445008604316633,
+      "task": "three_stage"
+    },
+    {
+      "abs_difference_vs_aggregate": 0.0,
+      "aggregate_macro_f1_mean": 0.8134785745378722,
+      "architecture": "mobilenet_v2",
+      "headline_macro_f1": 0.813,
+      "matches_headline_3dp": true,
+      "recomputed_macro_f1_mean": 0.8134785745378722,
+      "task": "binary"
+    },
+    {
+      "abs_difference_vs_aggregate": 0.0,
+      "aggregate_macro_f1_mean": 0.8969895354807981,
+      "architecture": "resnet50",
+      "headline_macro_f1": 0.897,
+      "matches_headline_3dp": true,
+      "recomputed_macro_f1_mean": 0.8969895354807981,
+      "task": "binary"
+    },
+    {
+      "abs_difference_vs_aggregate": 0.0,
+      "aggregate_macro_f1_mean": 0.8619804942554946,
+      "architecture": "convnext_tiny",
+      "headline_macro_f1": 0.862,
+      "matches_headline_3dp": true,
+      "recomputed_macro_f1_mean": 0.8619804942554946,
+      "task": "binary"
+    }
+  ],
+  "reproduction_mismatches": 0,
+  "results": [
+    {
+      "accuracy": 0.42839951865222625,
+      "balanced_accuracy": 0.3333333333333333,
+      "ece_temperature_scaled": null,
+      "ece_uncalibrated": 0.09316901210697864,
+      "macro_f1": 0.19994383600112328,
+      "macro_f1_ci_high": 0.2484764302774351,
+      "macro_f1_ci_low": 0.11793695601035054,
+      "method": "majority",
+      "task": "three_stage",
+      "validation_macro_f1": 0.2091182091182091
+    },
+    {
+      "accuracy": 0.42358604091456076,
+      "balanced_accuracy": 0.407480922487992,
+      "ece_temperature_scaled": 0.07949778137308114,
+      "ece_uncalibrated": 0.243458894188322,
+      "macro_f1": 0.40695664128419295,
+      "macro_f1_ci_high": 0.5175623549427099,
+      "macro_f1_ci_low": 0.3083518418870668,
+      "method": "hsv_histogram",
+      "task": "three_stage",
+      "validation_macro_f1": 0.5094611329105855
+    },
+    {
+      "accuracy": 0.6137184115523465,
+      "balanced_accuracy": 0.6268028569224114,
+      "ece_temperature_scaled": 0.09658742914943676,
+      "ece_uncalibrated": 0.34356140251853096,
+      "macro_f1": 0.6113143339333854,
+      "macro_f1_ci_high": 0.7171796558393496,
+      "macro_f1_ci_low": 0.5014117026426114,
+      "method": "probe_resnet50",
+      "task": "three_stage",
+      "validation_macro_f1": 0.7179007053126333
+    },
+    {
+      "accuracy": 0.6341756919374247,
+      "balanced_accuracy": 0.6241689630861115,
+      "ece_temperature_scaled": 0.08963211246478087,
+      "ece_uncalibrated": 0.3464496665005498,
+      "macro_f1": 0.6227078191111963,
+      "macro_f1_ci_high": 0.7280254479211874,
+      "macro_f1_ci_low": 0.498565822456761,
+      "method": "probe_convnext_tiny",
+      "task": "three_stage",
+      "validation_macro_f1": 0.7253572918728416
+    },
+    {
+      "accuracy": 0.6373846770958683,
+      "balanced_accuracy": 0.6374900107801461,
+      "ece_temperature_scaled": 0.09017734271400513,
+      "ece_uncalibrated": 0.1484874538950132,
+      "macro_f1": 0.6267328620889524,
+      "macro_f1_ci_high": 0.7294429792103363,
+      "macro_f1_ci_low": 0.5195094629982827,
+      "method": "finetuned_mobilenet_v2",
+      "task": "three_stage",
+      "validation_macro_f1": 0.7273402184448691
+    },
+    {
+      "accuracy": 0.695146409947854,
+      "balanced_accuracy": 0.6928064624923912,
+      "ece_temperature_scaled": 0.05863303445474114,
+      "ece_uncalibrated": 0.09128385379458089,
+      "macro_f1": 0.6898448257346382,
+      "macro_f1_ci_high": 0.7747488298733577,
+      "macro_f1_ci_low": 0.5855456553448711,
+      "method": "finetuned_resnet50",
+      "task": "three_stage",
+      "validation_macro_f1": 0.7431753259573863
+    },
+    {
+      "accuracy": 0.6602486963497793,
+      "balanced_accuracy": 0.6478683415400641,
+      "ece_temperature_scaled": 0.0965618360716508,
+      "ece_uncalibrated": 0.15022807073991026,
+      "macro_f1": 0.6445008604316633,
+      "macro_f1_ci_high": 0.7461086752684453,
+      "macro_f1_ci_low": 0.5339967828257686,
+      "method": "finetuned_convnext_tiny",
+      "task": "three_stage",
+      "validation_macro_f1": 0.7569544002513963
+    },
+    {
+      "accuracy": 0.5993265993265994,
+      "balanced_accuracy": 0.5,
+      "ece_temperature_scaled": null,
+      "ece_uncalibrated": 0.09569256768914758,
+      "macro_f1": 0.37473684210526315,
+      "macro_f1_ci_high": 0.442113782658084,
+      "macro_f1_ci_low": 0.2389360812708028,
+      "method": "majority",
+      "task": "binary",
+      "validation_macro_f1": 0.38686868686868686
+    },
+    {
+      "accuracy": 0.6717171717171717,
+      "balanced_accuracy": 0.6606670758190917,
+      "ece_temperature_scaled": 0.02691403335446067,
+      "ece_uncalibrated": 0.1728940744259186,
+      "macro_f1": 0.6598387736223075,
+      "macro_f1_ci_high": 0.8341968523484622,
+      "macro_f1_ci_low": 0.49341041941837405,
+      "method": "hsv_histogram",
+      "task": "binary",
+      "validation_macro_f1": 0.6752803100042635
+    },
+    {
+      "accuracy": 0.8821548821548821,
+      "balanced_accuracy": 0.8968109715796431,
+      "ece_temperature_scaled": 0.04814645079267149,
+      "ece_uncalibrated": 0.07798544541770219,
+      "macro_f1": 0.8808568677792041,
+      "macro_f1_ci_high": 0.9757625089509488,
+      "macro_f1_ci_low": 0.7724153447280458,
+      "method": "probe_resnet50",
+      "task": "binary",
+      "validation_macro_f1": 0.9325603589487927
+    },
+    {
+      "accuracy": 0.8939393939393939,
+      "balanced_accuracy": 0.8934118591256728,
+      "ece_temperature_scaled": 0.053577982366568085,
+      "ece_uncalibrated": 0.044603484831087434,
+      "macro_f1": 0.8903824691625633,
+      "macro_f1_ci_high": 0.9607336424796927,
+      "macro_f1_ci_low": 0.8196598639236571,
+      "method": "probe_convnext_tiny",
+      "task": "binary",
+      "validation_macro_f1": 0.922526682417542
+    },
+    {
+      "accuracy": 0.8181818181818182,
+      "balanced_accuracy": 0.8209249992131684,
+      "ece_temperature_scaled": 0.11043183244550507,
+      "ece_uncalibrated": 0.06669640166430689,
+      "macro_f1": 0.8134785745378722,
+      "macro_f1_ci_high": 0.9643885691792436,
+      "macro_f1_ci_low": 0.6976197673504909,
+      "method": "finetuned_mobilenet_v2",
+      "task": "binary",
+      "validation_macro_f1": 0.9534398174769523
+    },
+    {
+      "accuracy": 0.9017957351290685,
+      "balanced_accuracy": 0.8941632832908444,
+      "ece_temperature_scaled": 0.04817647491749202,
+      "ece_uncalibrated": 0.04625734713437631,
+      "macro_f1": 0.8969895354807981,
+      "macro_f1_ci_high": 0.9610977725870586,
+      "macro_f1_ci_low": 0.8279107633043155,
+      "method": "finetuned_resnet50",
+      "task": "binary",
+      "validation_macro_f1": 0.9386085906568962
+    },
+    {
+      "accuracy": 0.8653198653198654,
+      "balanced_accuracy": 0.8662858401787682,
+      "ece_temperature_scaled": 0.06103718681644638,
+      "ece_uncalibrated": 0.06426891050050508,
+      "macro_f1": 0.8619804942554946,
+      "macro_f1_ci_high": 0.9538034574004298,
+      "macro_f1_ci_low": 0.7921047134115665,
+      "method": "finetuned_convnext_tiny",
+      "task": "binary",
+      "validation_macro_f1": 0.9295337462144233
+    }
+  ],
+  "scope": {
+    "C_grid": [
+      0.01,
+      0.1,
+      1.0,
+      10.0,
+      100.0
+    ],
+    "bootstrap": {
+      "interval": "95% percentile",
+      "replicates": 2000,
+      "seed": 2026,
+      "unit": "capture_group_id"
+    },
+    "class_weight_grid": [
+      "none",
+      "balanced"
+    ],
+    "ece": "15 equal-width confidence bins; temperature-scaled = validation-fitted temperature on saved probabilities",
+    "hsv_representations": [
+      "hsv_joint_8x4x4",
+      "hsv_channels_3x32"
+    ],
+    "images": {
+      "binary": {
+        "test": 594,
+        "train": 2339,
+        "validation": 607
+      },
+      "three_stage": {
+        "test": 831,
+        "train": 3514,
+        "validation": 838
+      }
+    },
+    "logistic_regression": "sklearn 1.9.0 LogisticRegression(lbfgs, L2, max_iter=10000)",
+    "probe_features": "L2-normalised penultimate ImageNet features, standardised on train",
+    "references": {
+      "convnext_tiny": "validation-selected",
+      "mobilenet_v2": "smallest",
+      "resnet50": "test leader"
+    },
+    "selection": "validation macro-F1 only (ties keep the earlier grid entry: smaller C, no class weights, joint HSV)",
+    "split": "frozen grouped split (data/splits/grouped_manifest.csv)"
+  },
+  "versions": {
+    "numpy": "2.4.6",
+    "python": "3.13.5",
+    "sklearn": "1.9.0",
+    "torch": "2.11.0+cu128",
+    "torchvision": "0.26.0+cu128"
+  }
+}

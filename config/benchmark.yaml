@@ -1,0 +1,45 @@
+seed: 42
+device: auto
+data:
+  manifest: data/primary_benchmark_manifest.csv
+  # In this multi-worktree layout, archives/extracted images live in the sibling data worktree.
+  # Every CLI also accepts --image-root so a standalone checkout can point at its acquisition root.
+  image_root: ../data/raw
+  image_size: 224
+  batch_size: 24
+  num_workers: 4
+  pin_memory: true
+  split_ratios: [0.70, 0.15, 0.15]
+  split_names: [train, validation, test]
+  stratify_columns: [freshness_label, produce_type]
+  group_columns: [duplicate_group_id, capture_group_id]
+grouping:
+  phash_hamming_threshold: 6
+  dhash_hamming_threshold: 6
+  embedding_architecture: convnext_tiny
+  embedding_cosine_similarity_threshold: 0.985
+  embedding_neighbors: 10
+  filename_timestamp_gap_seconds: 120
+  filename_rules: [timestamp_gap, whatsapp_adjacent_index, manual_series_adjacent_index]
+model:
+  names: [mobilenet_v2, resnet50, densenet121, efficientnet_b0, convnext_tiny]
+  pretrained: true
+  auxiliary_produce_head: false
+training:
+  epochs: 30
+  head_warmup_epochs: 2
+  learning_rate: 0.0003
+  weight_decay: 0.0001
+  label_smoothing: 0.05
+  auxiliary_loss_weight: 0.20
+  amp: true
+  gradient_accumulation_steps: 1
+  patience: 6
+  monitor: validation_macro_f1
+  task: three_stage
+evaluation:
+  ece_bins: 15
+  corruption_severities: [1, 2, 3, 4, 5]
+  latency_warmup: 20
+  latency_iterations: 100
+output_dir: results

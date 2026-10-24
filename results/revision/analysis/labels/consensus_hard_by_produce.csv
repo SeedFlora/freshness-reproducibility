@@ -1,0 +1,9 @@
+produce_type,Fresh_hard,Semi-Fresh_hard,Rotten_hard,Fresh_test,Semi-Fresh_test,Rotten_test
+banana,17,0,3,29,30,43
+bitter_melon,0,22,0,25,25,25
+cucumber,2,9,0,19,35,10
+eggplant,16,0,0,16,31,18
+orange,0,2,0,32,44,18
+papaya,2,7,28,40,8,72
+pineapple,16,25,0,121,32,22
+tomato,0,6,5,74,32,30

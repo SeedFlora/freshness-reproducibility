@@ -1,0 +1,253 @@
+{
+  "source_record_sha256": "fc47ec9f16c7e9b2b59dddff207ad5af01209ad7d66ddf65d9123f650f1ebb4a",
+  "source_record_date": "2026-08-22",
+  "qualification": "Metadata and archive checksums are extracted from the executed acquisition audit. Original images are obtained from the versioned source repositories; they are not redistributed in this release.",
+  "primary": {
+    "name": "AgriFreshNET Freshness and Shelf-Life Image Dataset",
+    "repository": "Mendeley Data",
+    "doi": "10.17632/42m5tb7yv9.1",
+    "version": 1,
+    "landing_url": "https://data.mendeley.com/datasets/42m5tb7yv9/1",
+    "doi_url": "https://doi.org/10.17632/42m5tb7yv9.1",
+    "published_at": "2026-07-30T07:52:56.260Z",
+    "license": {
+      "short_name": "CC BY 4.0",
+      "full_name": "Creative Commons Attribution 4.0 International",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "repository_license_id": "01d9c749-3c4d-4431-9df3-620b2dcfe144"
+    },
+    "contributors": [
+      "Fouzia Risdin",
+      "Hafsha Salauddin",
+      "Tasniya aziza tufa",
+      "Md Jakir Hossain"
+    ],
+    "raw_archive": {
+      "preferred_filename": "Raw Data.zip",
+      "available_in_version_1": false,
+      "status": "repository method text mentions the file, but no downloadable raw object is exposed",
+      "processed_fallback_used": true,
+      "fallback_reason": "Raw Data.zip remained unavailable across official DOI, versioned file/folder, and download-all endpoints. The task explicitly permits Processed Data.zip only when raw is unavailable."
+    },
+    "downloaded_file": {
+      "filename": "Processed Data.zip",
+      "repository_file_id": "7b216853-8f3b-47fd-b1ae-df88a367a1d1",
+      "repository_content_id": "8282674e-3803-4b08-9288-69f89bbf1c3c",
+      "content_type": "application/zip",
+      "created_at": "2026-07-28T19:01:39.257Z",
+      "repository_size_bytes": 347828971,
+      "downloaded_size_bytes": 347828971,
+      "repository_sha256": "6607a48bf2817f9dfc8d4a1c32ce663c1d8308b4b1251e9bf65f074fcac53f11",
+      "downloaded_sha256": "6607a48bf2817f9dfc8d4a1c32ce663c1d8308b4b1251e9bf65f074fcac53f11",
+      "checksum_matches_repository": true,
+      "request_url": "https://data.mendeley.com/public-files/datasets/42m5tb7yv9/files/7b216853-8f3b-47fd-b1ae-df88a367a1d1/file_downloaded",
+      "response_final_url": "https://prod-dcd-datasets-public-files-eu-west-1.s3.eu-west-1.amazonaws.com/efa1a3b3-3239-48f1-aecc-dfc5e16ffd2d",
+      "http_status": 200,
+      "download_started_at_utc": "2026-08-22T15:09:17.4320349Z",
+      "download_finished_at_utc": "2026-08-22T15:09:40.3685843Z",
+      "download_seconds": 22.834184
+    },
+    "audit": {
+      "total_files": 14160,
+      "total_bytes": 348785490,
+      "class_directories": 24,
+      "files_per_class_directory": 590,
+      "produce_types": [
+        "banana",
+        "bitter_melon",
+        "cucumber",
+        "eggplant",
+        "orange",
+        "papaya",
+        "pineapple",
+        "tomato"
+      ],
+      "freshness_stages": [
+        "Fresh",
+        "Semi-Fresh",
+        "Rotten"
+      ],
+      "file_extensions": {
+        ".jpg": 13890,
+        ".jpeg": 270
+      },
+      "decoded_formats": {
+        "JPEG": 14160
+      },
+      "image_modes": {
+        "RGB": 14160
+      },
+      "dimensions": {
+        "512x512": 14160
+      },
+      "unique_dimensions": 1,
+      "single_frame_images": 14160,
+      "corrupt_files": 0,
+      "extension_format_mismatches": 0,
+      "metadata_files": 0,
+      "label_source": "parent directory name",
+      "shelf_life_annotation_source": "parent directory interval only; no per-image metadata file",
+      "pre_generated_augmentation_rule": "filename matches ^aug_[0-9]+_",
+      "pre_generated_augmented_files": 8943,
+      "non_augmented_original_candidates": 5217,
+      "clean_benchmark_candidates": 5183,
+      "clean_exclusion_calculation": "5217 non-augmented candidates - 34 cross-label exact-duplicate conflicts - 0 corrupt files = 5183",
+      "clean_stage_counts": {
+        "Fresh": 1917,
+        "Semi-Fresh": 1643,
+        "Rotten": 1623
+      },
+      "clean_produce_counts": {
+        "banana": 677,
+        "bitter_melon": 521,
+        "cucumber": 410,
+        "eggplant": 643,
+        "orange": 751,
+        "papaya": 499,
+        "pineapple": 552,
+        "tomato": 1130
+      },
+      "exact_duplicates_full_archive": {
+        "groups": 36,
+        "files_in_groups": 76,
+        "redundant_copies": 40,
+        "largest_group": 5
+      },
+      "exact_duplicates_non_augmented_candidates": {
+        "groups": 22,
+        "files_in_groups": 48,
+        "redundant_copies": 26
+      },
+      "cross_label_exact_duplicate_conflicts": {
+        "groups": 17,
+        "files": 34,
+        "labels": [
+          "Fresh",
+          "Semi-Fresh"
+        ],
+        "produce_type": "orange",
+        "decision": "exclude every conflicting file; do not choose a label winner"
+      },
+      "remaining_same_label_exact_duplicates": {
+        "groups": 5,
+        "files_in_groups": 14,
+        "redundant_copies": 9,
+        "policy": "retain and keep each duplicate_group_id in one split"
+      },
+      "metadata_discrepancies": [
+        "Repository claims 14500 images; archive contains 14160 (340 fewer, 2.34% shortfall).",
+        "Repository claims an average of 569 images per class; all 24 extracted folders contain exactly 590.",
+        "The claimed total of 14500 divided by 24 is about 604.2, not 569, so the published figures are mutually inconsistent.",
+        "Repository method text directs users to Raw Data.zip, but version 1 exposes only Processed Data.zip.",
+        "Every exposed image is already 512x512 and 8943 filenames explicitly mark augmentation, confirming that the available archive is processed rather than sensor raw."
+      ]
+    }
+  },
+  "external": {
+    "name": "Fresh and Rotten Fruits Dataset for Machine-Based Evaluation of Fruit Quality",
+    "repository": "Mendeley Data",
+    "doi": "10.17632/bdd69gyhv8.1",
+    "version": 1,
+    "landing_url": "https://data.mendeley.com/datasets/bdd69gyhv8/1",
+    "doi_url": "https://doi.org/10.17632/bdd69gyhv8.1",
+    "published_at": "2022-04-08T16:36:53.956Z",
+    "license": {
+      "short_name": "CC BY 4.0",
+      "full_name": "Creative Commons Attribution 4.0 International",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "repository_license_id": "01d9c749-3c4d-4431-9df3-620b2dcfe144"
+    },
+    "contributors": [
+      "Nusrat Sultana",
+      "Musfika Jahan",
+      "Mohammad Shorif Uddin"
+    ],
+    "download": {
+      "request_url": "https://data.mendeley.com/public-files/datasets/bdd69gyhv8/files/de93ba06-6a58-45e3-913d-837b2ae52acb/file_downloaded",
+      "response_final_url": "https://prod-dcd-datasets-public-files-eu-west-1.s3.eu-west-1.amazonaws.com/5f1cbd0f-b19a-4e2a-a95d-b6a0f8dc47bb",
+      "http_status": 200,
+      "downloaded_size_bytes": 2794170228,
+      "downloaded_sha256": "f89d67d4c4b24810bcd8406db877db6b1ac9834cea0b0cb56d65acebe59e66ff",
+      "checksum_matches_repository": true,
+      "started_at_utc": "2026-08-22T15:16:28.2720698Z",
+      "finished_at_utc": "2026-08-22T15:18:58.7512755Z",
+      "download_seconds": 150.409807
+    },
+    "audit": {
+      "repository_claimed_original_images": 3200,
+      "actual_original_images": 3200,
+      "class_directories": 16,
+      "fruit_types": [
+        "apple",
+        "banana",
+        "grape",
+        "guava",
+        "jujube",
+        "orange",
+        "pomegranate",
+        "strawberry"
+      ],
+      "freshness_stages": [
+        "Fresh",
+        "Rotten"
+      ],
+      "files_per_class": 200,
+      "file_extensions": {
+        ".jpg": 3200
+      },
+      "decoded_formats": {
+        "JPEG": 3200
+      },
+      "image_modes": {
+        "RGB": 3200
+      },
+      "unique_dimensions": 2693,
+      "most_common_dimensions": {
+        "4160x3120": 192,
+        "1200x1600": 87,
+        "3120x4160": 63,
+        "1600x1200": 50,
+        "4000x3000": 30,
+        "3000x4000": 30
+      },
+      "smallest_dimension_observed": "295x395",
+      "largest_pixel_count_dimensions": [
+        "4160x3120",
+        "3120x4160"
+      ],
+      "corrupt_files": 0,
+      "extension_format_mismatches": 0,
+      "exact_duplicates": {
+        "groups": 7,
+        "files_in_groups": 14,
+        "redundant_copies": 7,
+        "location": "all seven pairs are within FreshOrange",
+        "policy": "retain with shared duplicate_group_id"
+      },
+      "primary_produce_types": [
+        "banana",
+        "bitter_melon",
+        "cucumber",
+        "eggplant",
+        "orange",
+        "papaya",
+        "pineapple",
+        "tomato"
+      ],
+      "overlapping_produce_types": [
+        "banana",
+        "orange"
+      ],
+      "overlap_count": 2,
+      "alternative_external_dataset_needed": false,
+      "overlap_original_images": 800,
+      "overlap_class_counts": {
+        "FreshBanana": 200,
+        "RottenBanana": 200,
+        "FreshOrange": 200,
+        "RottenOrange": 200
+      },
+      "external_use_policy": "external test only; do not merge into primary training or tune on these images"
+    }
+  }
+}

@@ -1,0 +1,6 @@
+architecture,binary_validation_macro_f1_mean,binary_validation_macro_f1_sd,binary_validation_rank,binary_validation_top2,three_stage_validation_macro_f1_mean,three_stage_validation_rank,original_external_selection,frozen_binary_rank_agrees
+mobilenet_v2,0.9534398174769523,0.018712987420993255,1,True,0.7273402184448691,3,False,True
+resnet50,0.9386085906568962,0.010883306290681835,3,False,0.7431753259573863,2,True,True
+densenet121,0.9360057810036277,0.03131411961834854,4,False,0.6938156846193841,5,False,True
+efficientnet_b0,0.9449572208592031,0.011643871969913238,2,True,0.7218075487401857,4,False,True
+convnext_tiny,0.9295337462144233,0.026487281204008995,5,False,0.7569544002513963,1,True,True

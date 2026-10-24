@@ -1,0 +1,6 @@
+level,label,crossing_capture_groups,crossing_capture_images,crossing_duplicate_groups,crossing_duplicate_images,crossing_embedding_groups,crossing_embedding_images,crossing_sha256_groups,crossing_sha256_images,test_images,test_capture_groups,test_Fresh_share,test_Semi-Fresh_share,test_Rotten_share,test_capture_linked,test_duplicate_linked
+L0_naive,L0 naive,250,5068,91,297,91,480,4,12,778,227,0.37146529562982006,0.3161953727506427,0.31233933161953725,775,62
+L1_exact,L1 SHA-256,259,5119,95,309,77,450,0,0,780,217,0.367948717948718,0.3192307692307692,0.3128205128205128,777,59
+L2_hash,L2 +hash,251,5086,0,0,64,420,0,0,781,218,0.3687580025608195,0.31882202304737517,0.31241997439180536,773,0
+L3_embedding,L3 +embed.,251,5068,0,0,0,0,0,0,783,213,0.37547892720306514,0.31417624521072796,0.3103448275862069,782,0
+L4_capture,L4 +capture,0,0,0,0,0,0,0,0,831,31,0.42839951865222625,0.2851985559566787,0.28640192539109505,0,0

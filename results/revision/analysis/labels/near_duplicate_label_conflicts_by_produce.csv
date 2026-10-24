@@ -1,0 +1,6 @@
+produce_type,stage_pair,pairs
+eggplant,Fresh/Semi-Fresh,6
+papaya,Fresh/Rotten,1
+tomato,Fresh/Rotten,2
+tomato,Fresh/Semi-Fresh,30
+tomato,Semi-Fresh/Rotten,4

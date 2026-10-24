@@ -1,0 +1,67 @@
+{
+  "ranking": [
+    {
+      "architecture": "convnext_tiny",
+      "seed_count": 3,
+      "selected_for_external": true,
+      "selected_for_naive_ablation": true,
+      "selection_metric": "validation_macro_f1",
+      "selection_uses_test_metrics": false,
+      "validation_macro_f1_mean": 0.7569544002513963,
+      "validation_macro_f1_std": 0.027387213073412547,
+      "validation_rank": 1
+    },
+    {
+      "architecture": "resnet50",
+      "seed_count": 3,
+      "selected_for_external": true,
+      "selected_for_naive_ablation": false,
+      "selection_metric": "validation_macro_f1",
+      "selection_uses_test_metrics": false,
+      "validation_macro_f1_mean": 0.7431753259573863,
+      "validation_macro_f1_std": 0.031044245281087905,
+      "validation_rank": 2
+    },
+    {
+      "architecture": "mobilenet_v2",
+      "seed_count": 3,
+      "selected_for_external": false,
+      "selected_for_naive_ablation": false,
+      "selection_metric": "validation_macro_f1",
+      "selection_uses_test_metrics": false,
+      "validation_macro_f1_mean": 0.7273402184448691,
+      "validation_macro_f1_std": 0.03572312332868893,
+      "validation_rank": 3
+    },
+    {
+      "architecture": "efficientnet_b0",
+      "seed_count": 3,
+      "selected_for_external": false,
+      "selected_for_naive_ablation": false,
+      "selection_metric": "validation_macro_f1",
+      "selection_uses_test_metrics": false,
+      "validation_macro_f1_mean": 0.7218075487401857,
+      "validation_macro_f1_std": 0.023356716767885356,
+      "validation_rank": 4
+    },
+    {
+      "architecture": "densenet121",
+      "seed_count": 3,
+      "selected_for_external": false,
+      "selected_for_naive_ablation": false,
+      "selection_metric": "validation_macro_f1",
+      "selection_uses_test_metrics": false,
+      "validation_macro_f1_mean": 0.6938156846193841,
+      "validation_macro_f1_std": 0.045949299731551235,
+      "validation_rank": 5
+    }
+  ],
+  "selection_metric": "mean_validation_macro_f1_across_matched_seeds",
+  "selection_scope": "grouped_three_stage_validation_only",
+  "test_metrics_used": false,
+  "training_seeds": [
+    2026,
+    3407,
+    777
+  ]
+}

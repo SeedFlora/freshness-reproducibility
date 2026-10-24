@@ -1,0 +1,7 @@
+task,architecture,recomputed_macro_f1_mean,headline_macro_f1,matches_headline_3dp,aggregate_macro_f1_mean,abs_difference_vs_aggregate
+three_stage,mobilenet_v2,0.6267328620889524,0.627,True,0.6267328620889524,0.0
+three_stage,resnet50,0.6898448257346382,0.69,True,0.6898448257346382,0.0
+three_stage,convnext_tiny,0.6445008604316633,0.645,True,0.6445008604316633,0.0
+binary,mobilenet_v2,0.8134785745378722,0.813,True,0.8134785745378722,0.0
+binary,resnet50,0.8969895354807981,0.897,True,0.8969895354807981,0.0
+binary,convnext_tiny,0.8619804942554946,0.862,True,0.8619804942554946,0.0
